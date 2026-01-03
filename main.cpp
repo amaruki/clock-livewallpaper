@@ -26,6 +26,9 @@ IDWriteTextFormat* g_pSubTextFormat = nullptr;
 const UINT_PTR TIMER_UPDATE = 1;
 const int UPDATE_INTERVAL = 1000; // Update setiap 1 detik
 
+const std::wstring APP_VERSION = L"v0.1.0-pre";
+const std::wstring APP_AUTHOR = L"amaruki";
+
 struct Config {
     bool showOnStartup = true;
     int startupDelay = 3000;
@@ -452,7 +455,7 @@ void CreateTrayIcon(HWND hwnd)
     g_nid.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP;
     g_nid.uCallbackMessage = WM_USER + 1;
     g_nid.hIcon = LoadIcon(nullptr, IDI_APPLICATION);
-    wcscpy_s(g_nid.szTip, L"Desktop Clock - Klik kanan untuk menu");
+    swprintf_s(g_nid.szTip, L"Desktop Clock %s by %s", APP_VERSION.c_str(), APP_AUTHOR.c_str());
     Shell_NotifyIconW(NIM_ADD, &g_nid);
 }
 

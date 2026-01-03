@@ -1,6 +1,6 @@
-# Desktop Clock Overlay
+# Desktop Clock Overlay (v0.1.0-pre)
 
-A lightweight, resource-efficient Windows desktop clock that integrates seamlessly behind your desktop icons. Built with the Win32 API and Direct2D for high-performance rendering.
+A high-performance Win32 desktop clock overlay powered by Direct2D. Created by **amaruki**.
 
 ![Desktop Clock Preview](image/image.png)
 
@@ -48,6 +48,11 @@ You can manually edit this file to change:
 
 - **Toggle Clock**: Right-click the tray icon and select **"Aktifkan Clock"**.
 - **Exit**: Right-click the tray icon and select **"Keluar"**.
+
+## Credits
+
+- **Author**: amaruki
+- **Technologies**: C++, Win32 API, Direct2D, DirectWrite
 
 ## License
 
